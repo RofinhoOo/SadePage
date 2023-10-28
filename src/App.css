@@ -221,7 +221,7 @@ span.navbar-text {
 }
 
 .navbar-text button:hover {
-  color: #121212;
+  color: white;
   background: rgb(231, 111, 131);
   border: 1px solid rgb(231, 111, 131);
 
@@ -314,11 +314,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
+  color: rgb(172, 170, 170);
   display: block;
 }
 
 .banner p {
-  color: #B8B8B8;
+  color: rgb(172, 170, 170);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -326,7 +327,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner button {
-  color: #fff;
+  color: rgb(172, 170, 170);
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
@@ -626,7 +627,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form input:focus,
 .contact form textarea:focus {
   background: pink;
-  color: #121212;
+  color: white;
 }
 
 .contact form input::placeholder,
@@ -708,10 +709,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
+  color: white;
 }
 
 .new-email-bx {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 20px;
   position: relative;
@@ -722,7 +724,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background:  rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);;
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -732,26 +735,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: -1px;
 }
 
-.new-email-bx::after {
-  content: "";
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+
 
 .new-email-bx input {
   width: 100%;
-  color: #121212;
+  color: white;
   font-weight: 500;
   background: transparent;
   border: 0;
   padding: 0 15px;
+  
 }
+
+
+.new-email-bx input::placeholder {
+  color: white; /* Cambia el color del marcador de posición a blanco */
+  
+}
+
 
 .new-email-bx button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
