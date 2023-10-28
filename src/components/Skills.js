@@ -1,4 +1,5 @@
 import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import meter1 from '../assets/img/meter1.svg';
@@ -34,26 +35,26 @@ export const Skills = () => {
             <Container>
                 <Row>
                     <Col>
-                        <div className="skill-bx">
+                    <div className="skill-bx wow zoomIn">
                             <h2>
                                 Skills
                             </h2>
                             <p>Poner cosas sobre tus skills.<br></br>Más cosas sobre tus skills</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={meter1} alt="" />
                                     <h5>Community Manager</h5>
                                 </div>                               
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
+                                    <img src={meter2} alt="" />
                                     <h5>Brand Identity</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                    <img src={meter3} alt="" />
                                     <h5>Logo Design</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={meter1} alt="" />
                                     <h5>Community Manager</h5>
                                 </div>
                             </Carousel>

@@ -11,7 +11,7 @@ export function NavBar() {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => { 
+    useEffect(() => {
         const onScroll = () => {
             if (window.scrollY >= 50) {
                 setScrolled(true);
@@ -46,14 +46,14 @@ export function NavBar() {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#"><img src={icon1} alt="" /></a>
-                            <a href="#"><img src={icon2} alt="" /></a>
-                            <a href="#"><img src={icon3} alt="" /></a>
+                            <a href="https://www.linkedin.com/in/s%C3%A4deleer%C3%A4st/"><img src={icon1} alt="" /></a>
+                            <a href="https://www.facebook.com/sadelee.rast?locale=es_ES"><img src={icon2} alt="" /></a>
+                            <a href="https://www.instagram.com/sadelee.rast/"><img src={icon3} alt="" /></a>
                         </div>
                         <button className="btn btn-primary" onClick={() => console.log('connect')}>
-                        <span>
-                            Let's Connect
-                        </span>
+                            <span>
+                                Let's Connect
+                            </span>
                         </button>
                     </span>
                 </Navbar.Collapse>
