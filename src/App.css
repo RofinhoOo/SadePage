@@ -86,6 +86,12 @@ select:focus {
 }
 
 @media (min-width:1700px) {
+  body {
+    background-image: url('./assets/img/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   main .container {
     max-width: 100%;
     padding: 0 150px;
@@ -129,7 +135,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   opacity: 0.75;
 }
 
-nav.navbar .navbar-nav .nav-link.navbar-link:hover{
+nav.navbar .navbar-nav .nav-link.navbar-link:hover {
   background-color: pink;
 }
 
@@ -218,7 +224,7 @@ span.navbar-text {
   color: #121212;
   background: rgb(231, 111, 131);
   border: 1px solid rgb(231, 111, 131);
-  
+
 }
 
 .navbar-text button:hover::before {
@@ -298,8 +304,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 20px;
   margin-bottom: 25px;
   display: inline-block;
-  
- 
+
+
 }
 
 .banner h1 {
@@ -417,7 +423,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -40px;
-  
+
 
 }
 
@@ -647,8 +653,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 25px;
   position: relative;
   transition: 0.3s ease-in-out;
-  overflow: hidden; /* Añadimos esta propiedad */
-  
+  overflow: hidden;
+  /* Añadimos esta propiedad */
+
 }
 
 .contact form button span {
@@ -667,18 +674,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   position: absolute;
   top: 0;
-  left: -100%; /* Cambiamos el valor de left para que esté fuera del botón inicialmente */
+  left: -100%;
+  /* Cambiamos el valor de left para que esté fuera del botón inicialmente */
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 
-.contact form button:hover::before { /* Aplicamos el efecto al pasar el cursor por encima del botón */
+.contact form button:hover::before {
+  /* Aplicamos el efecto al pasar el cursor por encima del botón */
   left: 0;
 }
 
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -688,9 +698,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 65px 105px;
   margin-bottom: 80px;
- 
+  margin-top: 40px;
+
 }
 
 .newsletter-bx h3 {
