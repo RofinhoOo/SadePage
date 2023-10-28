@@ -115,11 +115,13 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border-radius: 0 0 10px 10px;
 }
 
 nav.navbar.scrolled {
   padding: 0px 0;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border-radius: 0 0 10px 10px;
 }
 
 nav.navbar a.navbar-brand {
@@ -128,7 +130,7 @@ nav.navbar a.navbar-brand {
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #fff !important; /* Establece el color del texto en blanco */
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -136,7 +138,11 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link:hover {
-  background-color: pink;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  opacity: 1;
+  
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -300,6 +306,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 25px;
