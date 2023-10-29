@@ -1,3 +1,13 @@
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+/* Tus estilos personalizados van aquí */
+
+
 /************ Custom Font ************/
 @font-face {
   font-family: Centra;
@@ -35,9 +45,9 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-image: url('./assets/img/fondo.png');
+  /* background-image: url('./assets/img/fondo.png');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
   scroll-behavior: smooth;
@@ -87,9 +97,9 @@ select:focus {
 
 @media (min-width:1700px) {
   body {
-    background-image: url('./assets/img/fondo.png');
+    /* background-image: url('./assets/img/fondo.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
   }
 
   main .container {
@@ -104,6 +114,10 @@ p.success {
 
 p.danger {
   color: red;
+}
+
+.banner{
+  margin-top: -300px;
 }
 
 /************ Navbar Css ************/

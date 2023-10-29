@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-gradient-to-r from-yellow-200 to-pink-200">
       <NavBar />
       <Banner />
       <Skills />
