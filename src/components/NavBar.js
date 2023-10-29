@@ -3,7 +3,7 @@ import icon1 from '../assets/img/icon1.png';
 import icon2 from '../assets/img/icon2.png';
 import icon3 from '../assets/img/icon3.png';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../assets/img/logo.png';
+import logo from '../assets/img/logo.jpg';
 import { HashLink } from 'react-router-hash-link';
 import {
     BrowserRouter as Router
