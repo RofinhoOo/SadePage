@@ -5,5 +5,8 @@ module.exports = {
     './public/index.html',
   ],
   plugins: [],
+  theme: {
+    // ... otras configuraciones de tema ...
+  },
+  variants: {},
 }
-
