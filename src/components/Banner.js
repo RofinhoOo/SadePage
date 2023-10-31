@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import sadeCv from '../assets/img/sade-cv.pdf';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -58,7 +59,11 @@ export const Banner = () => {
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi! I'm Säde,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Community Manager", "Content Creator", "Instagramer" ]'><span className="wrap">{text}</span></span></h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                                    <a href={sadeCv} target="_blank" rel="noopener noreferrer" className="cv-button">
+                                        Go to my CV <ArrowRightCircle size={25} />
+                                    </a>
+
+
                                 </div>}
                         </TrackVisibility>
                     </Col>
