@@ -6,13 +6,18 @@
  import icon3 from '../assets/img/icon3.png';
 
  export const Footer = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazar suavemente
+    };
+
     return (
         <footer className="footer">
             <Container>
                 <Row className="align-item-center">
                     <MailchimpForm />
                     <Col sm={6}>
-                        <img src={logo} alt="Logo" />
+                         <img src={logo} alt="Logo" onClick={scrollToTop} style={{ cursor: 'pointer' }} />
                     </Col>
                     <Col sm={6} className='text-center text-sm-end'>
                         <div className='social-icon'>

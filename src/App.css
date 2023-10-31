@@ -144,6 +144,7 @@ nav.navbar a.navbar-brand {
 
 nav.navbar a.navbar-brand img {
   border-radius: 20px;
+  width: 60%;
   
 }
 
@@ -726,6 +727,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 footer img{
   border-radius: 20px;
+  
 }
 
 .newsletter-bx {
@@ -829,7 +831,7 @@ footer img{
 
 
 .footer img {
-  width: 26%;
+  width: 12%;
 }
 
 .footer p {
