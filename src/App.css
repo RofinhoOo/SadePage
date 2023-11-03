@@ -349,6 +349,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner p {
   color: rgb(172, 170, 170);
   font-size: 18px;
+  font-weight: 400;
   margin-top: 40px;
   letter-spacing: 0.4px;
   line-height: 1.5em;
@@ -424,9 +425,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill p {
-  color: #B8B8B8;
+  color: white;
   font-size: 18px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.4px;
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
@@ -479,11 +480,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project p {
   color: white;
   font-size: 18px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.4px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
+  margin: 14px 0 75px 0;
 }
 
 .project .nav.nav-pills {
@@ -721,7 +720,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   background-position: center center;
   background-size: cover;
@@ -738,10 +737,22 @@ footer img{
   border-radius: 55px;
   color: #121212;
   padding: 65px 105px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-top: 40px;
+  
+  
 
 }
+
+.newsletter-bx .news-sus {
+  display: flex;
+  justify-content: space-between; /* Cambiado de 'center' a 'space-between' */
+  align-items: center;
+  margin: auto;
+}
+
+
+
 
 .newsletter-bx h3 {
   font-weight: 700;
@@ -785,8 +796,6 @@ footer img{
 }
 
 
-
-
 .new-email-bx input {
   width: 100%;
   color: white;
@@ -809,6 +818,10 @@ footer img{
   
 }
 
+.subscribed-message {
+  margin-top: 0.5em; /* Ajusta la altura según sea necesario */
+}
+
 .alert{
   color: white;
   border: 1px solid pink;
@@ -820,7 +833,13 @@ footer img{
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  width: 50%;
+  width: 100%;
+}
+
+.status-message{
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 

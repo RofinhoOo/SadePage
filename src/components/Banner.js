@@ -58,7 +58,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi! I'm Säde,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Community Manager", "Content Creator", "Instagramer" ]'><span className="wrap">{text}</span></span></h1>
-                                    <p>I invite you to explore my portfolio and discover the vibrant world I've built online. If you're looking for someone to bring a fresh and creative perspective to your social media management or digital marketing needs, let's chat.<br></br> Feel free to contact me, and don't forget to save my CV for that possible hire in the future. Let's create something amazing together! 🌟</p>
+                                    <p>I invite you to explore my portfolio and discover the vibrant world I've built online. If you're looking for someone to bring a fresh and creative perspective to your social media management or digital marketing needs, let's chat.<br></br> Feel free to contact me, and don't forget to save my CV. Let's create something amazing together! 🌟</p>
                                     <a href={sadeCv} target="_blank" rel="noopener noreferrer" className="cv-button">
                                         Go to my CV <ArrowRightCircle size={25} />
                                     </a>

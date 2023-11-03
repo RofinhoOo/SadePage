@@ -72,7 +72,7 @@ export const Contact = () => {
                           rows="6"
                           id="message"
                           name="message"
-                          placeholder="Message"
+                          placeholder="Your Message"
                         />
                         <ValidationError
                           prefix="Message"

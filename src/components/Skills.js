@@ -39,7 +39,7 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Poner cosas sobre tus skills.<br></br>Más cosas sobre tus skills</p>
+                            <p>In the ever-evolving digital landscape, I've honed a diverse skill set, combining creative content creation, digital marketing expertise, and data-driven decision-making for effective community management.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="" />
