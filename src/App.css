@@ -318,6 +318,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 260px 0 100px 0;
   text-align: center;
+  display: flex;
 
 }
 
@@ -348,9 +349,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner p {
   color: rgb(172, 170, 170);
   font-size: 18px;
-  letter-spacing: 0.8px;
+  margin-top: 40px;
+  letter-spacing: 0.4px;
   line-height: 1.5em;
   width: 96%;
+  align-items: center;
+  
 }
 
 .cv-button {
