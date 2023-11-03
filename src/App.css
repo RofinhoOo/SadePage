@@ -128,13 +128,13 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32s ease-in-out;
-  background: rgba(170, 54, 124, 0.5);
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border-radius: 0 0 10px 10px;
 }
 
 nav.navbar.scrolled {
   padding: 8px 0;
-  background: rgba(170, 54, 124, 0.5);
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border-radius: 0 0 10px 10px;
 }
 
@@ -248,8 +248,8 @@ span.navbar-text {
 
 .navbar-text button:hover {
   color: white;
-  background: rgb(231, 111, 131);
-  border: 1px solid rgb(231, 111, 131);
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border: 1px solid linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 
 }
 
@@ -695,7 +695,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form button:hover {
   color: #fff;
-  background: rgb(231, 111, 131);
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 }
 
 .contact form button::before {
@@ -764,7 +764,7 @@ footer img{
 .new-email-bx::before {
   content: "";
   background:  rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
