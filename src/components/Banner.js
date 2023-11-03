@@ -53,15 +53,14 @@ export const Banner = () => {
             <Container>
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <div className="animate__animated animate__fadeIn">
+                        <div className="animated-fade-in">
                             <span className="tagline">Welcome to my Portfolio</span>
-                            <h1>{`Hi! I'm Säde,`} <span className="txt-rotate" dataPeriod="500" data-rotate='[ "Community Manager", "Content Creator", "Instagramer" ]'><span className="wrap">{text}</span></span></h1>
+                            <h1>{`Hi! I'm Säde,`} <span className="txt-rotate" dataPeriod="10" data-rotate='[ "Community Manager", "Content Creator", "Instagramer" ]'><span className="wrap">{text}</span></span></h1>
                             <p>I invite you to explore my portfolio and discover the vibrant world I've built online. If you're looking for someone to bring a fresh and creative perspective to your social media management or digital marketing needs, let's chat.<br></br> Feel free to contact me, and don't forget to save my CV. Let's create something amazing together! 🌟</p>
                             <a href={sadeCv} target="_blank" rel="noopener noreferrer" className="cv-button">
                                 Go to my CV <ArrowRightCircle size={25} />
                             </a>
                         </div>
-
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <TrackVisibility>
