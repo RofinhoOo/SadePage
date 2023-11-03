@@ -13,23 +13,27 @@ export const Contact = () => {
       <Container>
         <Row className="item-form">
           <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <img
-                  id="contact-image"
-                  src={contactImg}
-                  alt="Contact Us"
-                  className={isVisible ? "animate__animated animate__zoomIn" : ""}
-                />
-              )}
-            </TrackVisibility>
+              <TrackVisibility offset={-100}>
+                {({ isVisible }) => (
+                  <img
+                    id="contact-image"
+                    src={contactImg}
+                    alt="Contact Us"
+                    className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                  />
+                )}
+              </TrackVisibility>
           </Col>
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={async (e) => {
+                    e.preventDefault(); // Previene el comportamiento predeterminado del formulario
+                    await handleSubmit(e); // Envía el formulario
+                    // Agrega cualquier lógica adicional que desees ejecutar después del envío del formulario.
+                  }}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
