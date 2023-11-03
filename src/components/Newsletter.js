@@ -35,7 +35,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
                     </Col>
 
                     <Col md={6} xl={7}>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} action={process.env.MAILCHIMP_MANAGE_URL}>
                             <div className='new-email-bx'>
                                 <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder='Email Address' />
                                 <button type="submit">Subscribe</button>
