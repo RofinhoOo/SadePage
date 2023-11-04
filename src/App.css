@@ -95,22 +95,110 @@ select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
+@media (max-width: 767px) {
   body {
-    /* background-image: url('./assets/img/fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat; */
+    max-width: 100%;
+    /* Haz que el contenedor ocupe todo el ancho de la pantalla */
   }
 
-  main .container {
-    max-width: 100%;
-    padding: 0 150px;
+  /* NAVBAR */
+
+  nav.navbar.scrolled {
+    display: flex;
+    /* Usa flexbox para alinear y espaciar los elementos */
+    align-items: center;
+    justify-content: space-between;
   }
+
+  nav.navbar a.navbar-brand img {
+    width: 100% !important;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  nav.navbar .navbar-nav {
+    display: inline-block;
+    /* Hacer que los elementos de navegación estén en línea */
+    align-items: center;
+    margin: auto;
+
+
+  }
+
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+
+    font-size: 16px !important;
+    display: inline-block !important;
+    /* Asegura que los elementos estén en línea */
+  }
+
+  .navbar-text {
+    margin-left: auto;
+    /* Empujar el botón "Home" hacia la izquierda */
+  }
+
+
+  .navbar-text button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px !important;
+    font-size: 18px;
+    background-color: transparent;
+    margin-right: 20px;
+
+  }
+
+  nav.navbar .navbar-toggler-icon {
+    margin-right: 20px;
+
+  }
+
+  span.navbar-text {
+    justify-content: space-between;
+  }
+
+  /* BANNER */
 
   .banner {
     padding: 260px 0 100px 0;
   }
+
+  .banner h1 {
+    font-size: 45px !important;
+  }
+
+  .banner p {
+    font-size: 16px !important;
+    text-align: justify;
+    margin: 20px; /* Ajusta los márgenes arriba y abajo */
+    padding: 0 20px; /* Ajusta el relleno izquierdo y derecho para evitar que el texto quede cortado en la derecha */
+    width: auto; /* Asegura que el ancho sea automático */
 }
+
+  .banner img {
+    width: 50%;
+    margin: 0 auto;
+    /* Esto centrará la imagen horizontalmente */
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* SKILLS */
+
+
+  .skill p{
+    text-align: start;
+    letter-spacing: none !important;
+    
+  }
+}
+
+
+
+
 p.success {
   color: green;
 }
@@ -145,16 +233,17 @@ nav.navbar a.navbar-brand {
 nav.navbar a.navbar-brand img {
   border-radius: 20px;
   width: 60%;
-  
+
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important; /* Establece el color del texto en blanco */
+  color: #fff !important;
+  /* Establece el color del texto en blanco */
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  opacity: 0.75;
+
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link:hover {
@@ -162,12 +251,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link:hover {
   border: 1px solid #fff;
   border-radius: 8px;
   opacity: 1;
-  
-}
 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  opacity: 1;
 }
 
 span.navbar-text {
@@ -355,7 +439,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
   align-items: center;
-  
+  text-align: justify;
+  /* Justifica el texto */
+
+
 }
 
 .cv-button {
@@ -367,7 +454,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none; /* Agrega esto para eliminar la subrayado de enlaces */
+  text-decoration: none;
+  /* Agrega esto para eliminar la subrayado de enlaces */
 }
 
 .cv-button svg {
@@ -720,16 +808,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  
+
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-footer img{
+footer img {
   border-radius: 20px;
-  
+
 }
 
 .newsletter-bx {
@@ -739,14 +827,15 @@ footer img{
   padding: 65px 105px;
   margin-bottom: 60px;
   margin-top: 40px;
-  
-  
+
+
 
 }
 
 .newsletter-bx .news-sus {
   display: flex;
-  justify-content: space-between; /* Cambiado de 'center' a 'space-between' */
+  justify-content: space-between;
+  /* Cambiado de 'center' a 'space-between' */
   align-items: center;
   margin: auto;
 }
@@ -778,7 +867,7 @@ footer img{
 
 .new-email-bx::before {
   content: "";
-  background:  rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   position: absolute;
@@ -791,8 +880,10 @@ footer img{
 
 .new-email-bx:hover,
 .new-email-bx:focus {
-  background: pink; /* Cambiamos el fondo al hacer clic en el elemento */
-  border: 1px solid pink; /* Cambiamos el borde al hacer clic en el elemento */
+  background: pink;
+  /* Cambiamos el fondo al hacer clic en el elemento */
+  border: 1px solid pink;
+  /* Cambiamos el borde al hacer clic en el elemento */
 }
 
 
@@ -803,26 +894,28 @@ footer img{
   background: transparent;
   border: 0;
   padding: 0 15px;
-  
+
 }
 
-.new-email-bx input:hover{
+.new-email-bx input:hover {
   background: transparent;
-  
+
 }
 
 
 .new-email-bx input::placeholder {
-  color: white; /* Cambia el color del marcador de posición a blanco */
-  
-  
+  color: white;
+  /* Cambia el color del marcador de posición a blanco */
+
+
 }
 
 .subscribed-message {
-  margin-top: 0.5em; /* Ajusta la altura según sea necesario */
+  margin-top: 0.5em;
+  /* Ajusta la altura según sea necesario */
 }
 
-.alert{
+.alert {
   color: white;
   border: 1px solid pink;
   border-radius: 20px;
@@ -836,7 +929,7 @@ footer img{
   width: 100%;
 }
 
-.status-message{
+.status-message {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -870,4 +963,3 @@ footer img{
   display: flex;
   align-items: center;
 }
-
