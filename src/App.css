@@ -103,6 +103,7 @@ select:focus {
 
   /* NAVBAR */
 
+ 
   nav.navbar.scrolled {
     display: flex;
     /* Usa flexbox para alinear y espaciar los elementos */
@@ -120,7 +121,7 @@ select:focus {
     display: inline-block;
     /* Hacer que los elementos de navegación estén en línea */
     align-items: center;
-    margin: auto;
+    
 
 
   }
@@ -151,9 +152,10 @@ select:focus {
 
   }
 
-  nav.navbar .navbar-toggler-icon {
-    margin-right: 20px;
 
+  .navbar-toggler{
+    width: 15% !important;
+    margin-right: 20px !important;
   }
 
   span.navbar-text {
@@ -173,9 +175,8 @@ select:focus {
   .banner p {
     font-size: 16px !important;
     text-align: justify;
-    margin: 20px; /* Ajusta los márgenes arriba y abajo */
-    padding: 0 20px; /* Ajusta el relleno izquierdo y derecho para evitar que el texto quede cortado en la derecha */
-    width: auto; /* Asegura que el ancho sea automático */
+    margin: 20px 20px !important;
+    padding: 0 20px !important;
 }
 
   .banner img {
@@ -188,12 +189,59 @@ select:focus {
 
   /* SKILLS */
 
+  .skill-bx{
+    margin: none !important;
+  }
 
   .skill p{
     text-align: start;
-    letter-spacing: none !important;
+    letter-spacing: normal !important;
+    margin: none !important;
+    font-size: 16px !important;
     
   }
+
+  /* PROJECTS */
+
+  .row{
+    padding-left: none !important;; 
+    padding-right: none !important;
+  }
+  .project-col {
+    padding: none !important;
+  }
+
+  .project p{
+    text-align: start;
+    margin: 20px 20px !important;
+    font-size: 16px !important;
+    
+  }
+
+  .proj-imgbx{
+    width: 60% !important;
+  }
+
+  .tab-content{
+    display: inline-flex !important;
+    width: 90% !important;
+    flex-direction: column;
+  }
+
+  .tab-content img {
+    margin-bottom: 20px; /* Agregar margen a la derecha de las imágenes */
+  }
+
+  /* CONTACT */
+
+  .contact img{
+    animation: updown 3s linear infinite !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* NEWSLETTER */
+
+  
 }
 
 
@@ -503,7 +551,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 40px 30px;
   margin-top: -40px;
 }
 

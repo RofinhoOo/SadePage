@@ -34,6 +34,7 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col className="project-col" size={12}>
+                    <div className="project-cont">
                         <h2>Projects</h2>
                         <p>Explore this compilation of works that vividly reflect the passion I have for content creation. Each piece is a testament to my commitment to engaging storytelling and creative expression.</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -50,7 +51,7 @@ export const Projects = () => {
                             </Nav>
                             <Tab.Content id="slideInUp">
                                 <Tab.Pane eventKey="first">
-                                    <Row>
+                                    <Row>                          
                                         {
                                             projects.map((project, index) => {
                                                 return (
@@ -60,7 +61,7 @@ export const Projects = () => {
                                                     />
                                                 )
                                             })
-                                        }
+                                        }                                  
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="section">
@@ -71,6 +72,7 @@ export const Projects = () => {
                                 </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
+                        </div>
                     </Col>
                 </Row>
             </Container>
