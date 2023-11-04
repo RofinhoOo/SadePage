@@ -174,7 +174,7 @@ select:focus {
 
   .banner p {
     font-size: 16px !important;
-    text-align: justify;
+    text-align: start !important;
     margin: 20px 20px !important;
     padding: 0 20px !important;
 }
@@ -310,25 +310,48 @@ select:focus {
   }
 
   /* FOOTER */
+  
 
-  .footer .social-icon {
+  .footer {
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Alinea los iconos a la derecha de la columna */
+    align-items: center; /* Alinea verticalmente en el centro */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px 0; /* Ajusta el relleno según tus necesidades */
+  }
+  
+  .footer img {
+    width: 30%;
+    float: left;
+  
   }
 
-  .footer .social-icon a {
-    width: 42px;  
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: flex;
-    border-radius: 50%;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+
+  .footer .text-center.text-sm-end {
+    text-align: right !important; /* Alinea el texto a la izquierda en dispositivos pequeños */
+    
+    
   }
+  
+  .footer  .social-icon {
+    text-align: right !important; /* Alinea el texto a la izquierda en dispositivos pequeños */
+    margin-top: 20px; /* Espacio entre los iconos */
+  }
+  .footer img {
+    width: 12%;
+  }
+  
+  .footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+  }
+  
   
 }
 
@@ -943,6 +966,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Footer Css ************/
+/* FOOTER */
+
 .footer {
 
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
@@ -955,6 +980,24 @@ footer img {
   border-radius: 20px;
 
 }
+
+.footer img {
+  width: 12%;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
 
 .newsletter-bx {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
@@ -1083,19 +1126,5 @@ footer img {
 
 
 
-.footer img {
-  width: 12%;
-}
 
-.footer p {
-  font-weight: 400;
-  font-size: 14px;
-  color: black;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
-}
 
-.span.navbar-text {
-  display: flex;
-  align-items: center;
-}
