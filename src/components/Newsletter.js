@@ -36,7 +36,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
                             </div>
                     </Col>
 
-                    <Col md={6} xl={7}>
+                    <Col className="news-btx" md={6} xl={7}>
                         {!subscribed && (
                             <form
                                 onSubmit={handleSubscribe}
