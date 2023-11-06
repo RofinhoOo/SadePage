@@ -48,13 +48,13 @@ export const Newsletter = ({ onValidated, status, message }) => {
                                 target="_blank"
                             >
                                 <div className="new-email-bx">
-                                    <input
+                                    <input       
                                         value={email}
                                         type="email"
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Email Address"
-                                    />
-                                    <button type="submit">Subscribe</button>
+                                    />                               
+                                        <button type="submit">Subscribe</button>                                     
                                 </div>
                             </form>
                         )}

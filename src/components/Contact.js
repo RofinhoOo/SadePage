@@ -14,14 +14,14 @@ export const Contact = () => {
         <Row className="item-form">
           <Col size={12} md={6}>
             <TrackVisibility>
-              {({ isVisible }) => (
+              {/* {({ isVisible }) => ( */}
                 <img
                   id="contact-image"
                   src={contactImg}
-                  alt="Contact Us"
-                  className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                  alt="Contact Us"                 
+                  // className={isVisible ? "animate__animated animate__zoomIn" : ""}
                 />
-              )}
+              {/* )} */}
             </TrackVisibility>
           </Col>
           <Col size={12} md={6}>

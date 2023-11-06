@@ -103,7 +103,7 @@ select:focus {
 
   /* NAVBAR */
 
- 
+
   nav.navbar.scrolled {
     display: flex;
     /* Usa flexbox para alinear y espaciar los elementos */
@@ -121,7 +121,7 @@ select:focus {
     display: inline-block;
     /* Hacer que los elementos de navegación estén en línea */
     align-items: center;
-    
+
 
 
   }
@@ -153,7 +153,7 @@ select:focus {
   }
 
 
-  .navbar-toggler{
+  .navbar-toggler {
     width: 15% !important;
     margin-right: 20px !important;
   }
@@ -177,7 +177,8 @@ select:focus {
     text-align: start !important;
     margin: 20px 20px !important;
     padding: 0 20px !important;
-}
+    
+  }
 
   .banner img {
     width: 50%;
@@ -189,73 +190,78 @@ select:focus {
 
   /* SKILLS */
 
-  .skill-bx .row{
-    padding-left: 20px !important; 
+  .skill-bx .row {
+    padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  .skill-bx{
+  .skill-bx {
     margin: none !important;
     padding: 100%;
   }
 
-  .skill p{
-    text-align: start;
+  .skill p {
+    text-align: center  !important;
     letter-spacing: normal !important;
     margin: 0 0 30px 0 !important;
     font-size: 16px !important;
-    
+
   }
 
-  .item{
+  .item {
     margin-top: none !important;
   }
 
   /* PROJECTS */
 
-  .project .row{
-    padding-left: 20px !important; 
+  .project .row {
+    padding-left: 20px !important;
     padding-right: 20px !important;
   }
-  .row{
-    
-    margin-top: none  !important;
+
+  .row {
+
+    margin-top: none !important;
   }
-  .project{
+
+  .project {
     padding: 0 !important;
   }
+
   .project-col {
     padding: none !important;
   }
 
-  .project p{
+  .project p {
     text-align: start;
     margin: 20px 20px !important;
     font-size: 16px !important;
-    
+
   }
 
-  .proj-imgbx{
+  .proj-imgbx {
     width: 60% !important;
   }
 
-  .tab-content{
+  .tab-content {
     display: inline-flex !important;
     width: 90% !important;
     flex-direction: column;
   }
 
   .tab-content img {
-    margin-bottom: 20px; /* Agregar margen a la derecha de las imágenes */
+    margin-bottom: 20px;
+    /* Agregar margen a la derecha de las imágenes */
   }
 
   /* CONTACT */
 
-  .contact{
-    padding-left: 20px !important; 
+  .contact {
+    padding-left: 20px !important;
     padding-right: 20px !important;
   }
-  .contact img{
+
+  .contact img {
     animation: updown 3s linear infinite !important;
     margin-bottom: 30px !important;
   }
@@ -264,12 +270,15 @@ select:focus {
 
   .new-email-bx {
     display: flex;
-    flex-direction: column; /* Configura la dirección de flexión a columna */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column;
+    /* Configura la dirección de flexión a columna */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
   }
 
-  .newsletter-bx h3{
+  .newsletter-bx h3 {
     font-size: 20px !important;
     text-align: start !important;
     font-weight: 500 !important;
@@ -278,39 +287,40 @@ select:focus {
     margin-top: -40px !important;
   }
 
-  .new-email-bx button{
+  .new-email-bx button {
     padding: 5px 10px !important;
-    
+
   }
 
   .new-email-bx input {
-   
+
     margin-bottom: 10px;
   }
 
   .newsletter-bx .row {
-    padding-left: none !important; 
+    padding-left: none !important;
     padding-right: none !important;
   }
 
-  .news-btx{
+  .news-btx {
     padding: 0 !important;
-    
+
   }
 
-  .new-email-bx::before{
-      content: "";
-      background: pink; /* Cambia el color de fondo deseado */
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 1;
-      bottom: 0;
-      right: 1;
+  .new-email-bx::before {
+    content: "";
+    background: pink;
+    /* Cambia el color de fondo deseado */
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 1;
+    bottom: 0;
+    right: 1;
   }
 
   /* FOOTER */
-  
+
 
   .footer {
     background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
@@ -318,32 +328,20 @@ select:focus {
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center; /* Alinea verticalmente en el centro */
-    justify-content: space-between; /* Espacio entre los elementos */
-    padding: 20px 0; /* Ajusta el relleno según tus necesidades */
-  }
-  
-  .footer img {
-    width: 30%;
-    float: left;
-  
+    /* Agregar Flexbox para alinear elementos horizontalmente */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    padding: 20px 0;
+    /* Ajusta el relleno según tus necesidades */
   }
 
-
-  .footer .text-center.text-sm-end {
-    text-align: right !important; /* Alinea el texto a la izquierda en dispositivos pequeños */
-    
-    
-  }
-  
-  .footer  .social-icon {
-    text-align: right !important; /* Alinea el texto a la izquierda en dispositivos pequeños */
-    margin-top: 20px; /* Espacio entre los iconos */
-  }
-  .footer img {
+  footer img {
     width: 12%;
+    border-radius: 20px;
   }
-  
+
   .footer p {
     font-weight: 400;
     font-size: 14px;
@@ -351,8 +349,43 @@ select:focus {
     letter-spacing: 0.5px;
     margin-top: 20px;
   }
-  
-  
+
+  .social-icon {
+    display: inline-block;
+    margin-left: 14px;
+  }
+
+  .social-icon a {
+    width: 42px;
+    height: 42px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .footer img {}
+
+  .footer .footer-logo {
+    margin-left: 20px;
+    width: 25% !important;
+  }
+
+
+  .footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-bottom: -10px !important;
+  }
+
+
 }
 
 
@@ -993,10 +1026,7 @@ footer img {
   margin-top: 20px;
 }
 
-
-
-
-
+/* CSS NEWSLETTER  */
 
 
 .newsletter-bx {
@@ -1006,8 +1036,6 @@ footer img {
   padding: 65px 105px;
   margin-bottom: 60px;
   margin-top: 40px;
-
-
 
 }
 
@@ -1123,8 +1151,3 @@ footer img {
   letter-spacing: 0.5px;
   border-radius: 18px;
 }
-
-
-
-
-
