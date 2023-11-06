@@ -178,7 +178,7 @@ select:focus {
     text-align: start !important;
     margin: 20px 20px !important;
     padding: 0 20px !important;
-    
+
   }
 
   .banner img {
@@ -202,7 +202,7 @@ select:focus {
   }
 
   .skill p {
-    text-align: center  !important;
+    text-align: center !important;
     letter-spacing: normal !important;
     margin: 0 0 30px 0 !important;
     font-size: 16px !important;
@@ -272,11 +272,10 @@ select:focus {
   .new-email-bx {
     display: flex;
     flex-direction: column;
-    /* Configura la dirección de flexión a columna */
     align-items: center;
-    /* Centra verticalmente */
     justify-content: center;
-    /* Centra horizontalmente */
+    margin: auto !important;
+
   }
 
   .newsletter-bx h3 {
@@ -294,8 +293,14 @@ select:focus {
   }
 
   .new-email-bx input {
-
+    width: 100%; /* Cambia el ancho al 100% */
     margin-bottom: 10px;
+    justify-content: center;
+    background: pink;
+  }
+
+  .new-email-bx input:focus{
+    background: pink !important;
   }
 
   .newsletter-bx .row {
@@ -310,15 +315,19 @@ select:focus {
 
   .new-email-bx::before {
     content: "";
+    width: 100%; /* Cambia el ancho al 100% */
+    justify-content: center !important;
     background: pink;
     /* Cambia el color de fondo deseado */
-    position: absolute;
+    position: absolute !important;
     z-index: -1;
     top: 0;
     left: 1;
     bottom: 0;
     right: 1;
   }
+
+
 
   /* FOOTER */
 
@@ -365,9 +374,9 @@ select:focus {
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  
 
-  .footer .footer-logo{
+
+  .footer .footer-logo {
     margin-left: 20px;
     width: 25% !important;
     border-radius: 20px !important;
@@ -934,6 +943,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 
+
+
 .contact form input:focus,
 .contact form textarea:focus {
   background: pink;
@@ -1009,7 +1020,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .footer img {
   width: 12%;
-  
+
 }
 
 .footer-logo {
@@ -1068,7 +1079,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: background 0.3s ease-in-out;
 }
 
-
+.new-email-bx input:focus {
+  background-color: pink;
+}
 
 .new-email-bx::before {
   content: "";
@@ -1083,29 +1096,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: -1px;
 }
 
-.new-email-bx:hover,
-.new-email-bx:focus {
-  background: pink;
-  /* Cambiamos el fondo al hacer clic en el elemento */
-  border: 1px solid pink;
-  /* Cambiamos el borde al hacer clic en el elemento */
-}
-
 
 .new-email-bx input {
   width: 100%;
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+  color: #fff;
+  margin: 8px 8px 8px 8px;
+  padding: 18px 26px;
   font-weight: 500;
-  background: transparent;
-  border: 0;
-  padding: 0 15px;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
 
 }
 
-.new-email-bx input:hover {
-  background: transparent;
-
+.new-email-bx input:-internal-autofill-selected {
+  background-color: rgba(28, 146, 24, 0.1) !important;
 }
+
+/* .new-email-bx input:hover {
+  background: pink;
+
+} */
 
 
 .new-email-bx input::placeholder {
