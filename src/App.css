@@ -95,6 +95,7 @@ select:focus {
   outline: none;
 }
 
+
 @media (max-width: 767px) {
   body {
     max-width: 100%;
@@ -337,10 +338,6 @@ select:focus {
     /* Ajusta el relleno según tus necesidades */
   }
 
-  footer img {
-    width: 12%;
-    border-radius: 20px;
-  }
 
   .footer p {
     font-weight: 400;
@@ -368,11 +365,12 @@ select:focus {
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  .footer img {}
+  
 
-  .footer .footer-logo {
+  .footer .footer-logo{
     margin-left: 20px;
     width: 25% !important;
+    border-radius: 20px !important;
   }
 
 
@@ -1009,13 +1007,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 
-footer img {
-  border-radius: 20px;
-
-}
-
 .footer img {
   width: 12%;
+  
+}
+
+.footer-logo {
+  border-radius: 20px;
 }
 
 .footer p {
