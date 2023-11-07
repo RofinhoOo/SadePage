@@ -402,8 +402,8 @@ select:focus {
 
   .footer .footer-logo {
     margin-left: 20px;
-    width: 25% !important;
-    border-radius: 20px !important;
+    width: 10% !important;
+    border-radius: 10px !important;
   }
 
 
@@ -1141,12 +1141,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer img {
-  width: 12%;
+  width: 8%;
 
 }
 
 .footer-logo {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .footer p {

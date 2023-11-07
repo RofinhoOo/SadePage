@@ -54,14 +54,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
                             )}
                             <div className='news-sus-text'>
                                 {subscriptionStatus === 'sending' && (
-                                    <Alert
-                                        style={{
-                                            display: 'flex',
-                                            justifyContent: 'end',
-                                            width: '100%', // Asegura que ocupe todo el ancho disponible
-                                        }}
-                                        className="custom-alert sending-message"
-                                    >
+                                    <Alert className="custom-alert sending-message">
                                         Sending...
                                     </Alert>
                                 )}
