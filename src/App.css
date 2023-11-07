@@ -225,6 +225,18 @@ select:focus {
     margin-top: none !important;
   }
 
+  .project-cont .row{
+    gap: 40px !important;
+  }
+
+  video{
+    border: 1px solid rgba(255, 255, 255, 0.5);;
+  }
+
+  .video:hover {
+    border: 1px solid rgba(255, 255, 255);
+  }
+
   .project {
     padding: 0 !important;
   }
@@ -293,13 +305,14 @@ select:focus {
   }
 
   .new-email-bx input {
-    width: 100%; /* Cambia el ancho al 100% */
+    width: 100%;
+    /* Cambia el ancho al 100% */
     margin-bottom: 10px;
     justify-content: center;
     background: pink;
   }
 
-  .new-email-bx input:focus{
+  .new-email-bx input:focus {
     background: pink !important;
   }
 
@@ -315,7 +328,8 @@ select:focus {
 
   .new-email-bx::before {
     content: "";
-    width: 100%; /* Cambia el ancho al 100% */
+    width: 100%;
+    /* Cambia el ancho al 100% */
     justify-content: center !important;
     background: pink;
     /* Cambia el color de fondo deseado */
@@ -895,6 +909,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.project-col .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.project-card-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  
+  
+
+}
+
+.video {
+  width: 80%;
+  height: 40% !important;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.video:hover {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
 /************ Projects Css ************/
 .contact {
 
@@ -1048,12 +1092,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
-.newsletter-bx .news-sus {
+.newsletter-bx .row{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.news-sus {
+  display: flex;
+  justify-content: center !important;
   /* Cambiado de 'center' a 'space-between' */
   align-items: center;
-  margin: auto;
+ 
+}
+
+.news-sus-text {
+  margin-left: 150px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 
@@ -1112,9 +1172,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
-.new-email-bx input:-internal-autofill-selected {
-  background-color: rgba(28, 146, 24, 0.1) !important;
-}
+
 
 /* .new-email-bx input:hover {
   background: pink;
@@ -1153,6 +1211,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: end;
   align-items: center;
 }
+
+
 
 
 .new-email-bx button {

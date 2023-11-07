@@ -20,20 +20,20 @@ export const Newsletter = ({ onValidated, status, message }) => {
             <div className="newsletter-bx">
                 <Row>
                     <Col lg={12} md={6} xl={5}>
-                    <div className='news-sus'>
-                    <div className='news-sus-titulo'>
-                        <h3>Subscribe to the newsletter</h3>
+                        <div className='news-sus'>
+                            <div className='news-sus-titulo'>
+                                <h3>Subscribe to the newsletter</h3>
+                            </div>
+                            <div className='news-sus-text'>
+                                {status === 'sending' && <Alert className="custom-alert">Sending...</Alert>}
+                                {status === 'error' && <Alert variant="danger" className="custom-alert">{message}</Alert>}
+                                {subscribed && (
+                                    <Alert variant="success" className="custom-alert subscribed-message">
+                                        Successfully subscribed!
+                                    </Alert>
+                                )}
+                            </div>
                         </div>
-                        <div className='news-sus-text'>
-                            {status === 'sending' && <Alert className="custom-alert">Sending...</Alert>}
-                            {status === 'error' && <Alert variant="danger" className="custom-alert">{message}</Alert>}
-                            {subscribed && (
-                                <Alert variant="success" className="custom-alert subscribed-message">
-                                    Successfully subscribed!
-                                </Alert>
-                            )}
-                            </div>
-                            </div>
                     </Col>
 
                     <Col className="news-btx" md={6} xl={7}>
@@ -48,13 +48,13 @@ export const Newsletter = ({ onValidated, status, message }) => {
                                 target="_blank"
                             >
                                 <div className="new-email-bx">
-                                    <input       
+                                    <input
                                         value={email}
                                         type="email"
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Email Address"
-                                    />                               
-                                        <button type="submit">Subscribe</button>                                     
+                                    />
+                                    <button type="submit">Subscribe</button>
                                 </div>
                             </form>
                         )}
