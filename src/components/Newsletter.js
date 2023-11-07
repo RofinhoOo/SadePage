@@ -42,10 +42,10 @@ export const Newsletter = ({ onValidated, status, message }) => {
     };
 
     return (
-        <Col lg={12}>
+        <Col lg={12} md={12} xl={12} sm={12}>
             <div className="newsletter-bx">
                 <Row>
-                    <Col lg={6} md={6} xl={4}>
+                    <Col lg={6} md={6} xl={6} sm={6}>
                         <div className='news-sus'>
                             {subscriptionStatus !== 'success' && (
                                 <div className='news-sus-titulo'>
@@ -73,7 +73,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
                     </Col>
 
 
-                    <Col className="news-btx" lg={6} md={6} xl={6}>
+                    <Col className="news-btx" lg={6} md={6} xl={6} sm={6}>
                         {subscriptionStatus !== 'success' && (
                             <form
                                 onSubmit={handleSubscribe}

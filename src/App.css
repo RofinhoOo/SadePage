@@ -113,7 +113,8 @@ select:focus {
   }
 
   nav.navbar a.navbar-brand img {
-    width: 100% !important;
+    width: 30px !important;
+    border-radius: 10px !important;
     margin-bottom: 10px;
     margin-left: 20px;
   }
@@ -237,7 +238,8 @@ select:focus {
 
 
   .video:hover {
-    border: 2px solid rgba(255, 255, 255);
+    border: 3px solid purple;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.7) -5.91%, rgba(74, 47, 189, 0.7) 111.58%)
   }
 
   .project {
@@ -290,16 +292,16 @@ select:focus {
     align-items: center;
     justify-content: center;
     margin: auto !important;
+    width: 100% !important;
 
   }
 
-  
 
   .newsletter-bx h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     font-size: 20px !important;
     text-align: start !important;
     font-weight: 500 !important;
@@ -313,6 +315,7 @@ select:focus {
 
   }
 
+
   .new-email-bx input {
     width: 100%;
     /* Cambia el ancho al 100% */
@@ -325,8 +328,31 @@ select:focus {
     background: pink !important;
   }
 
-  .newsletter-bx .row {
+  .alert {
+    margin-left: 0 !important;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+   
+  }
+
+  .sending-message{
+    margin-top: 80px !important;
+    flex-direction: column !important;
     
+  }
+
+  .newsletter-bx {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    flex-direction: column;
+    /* Muestra el contenido como una columna */
+  }
+
+  .newsletter-bx .row {
+
     padding-left: none !important;
     padding-right: none !important;
   }
@@ -350,6 +376,8 @@ select:focus {
     bottom: 0;
     right: 1;
   }
+
+  
 
 
 
@@ -402,7 +430,7 @@ select:focus {
 
   .footer .footer-logo {
     margin-left: 20px;
-    width: 10% !important;
+    width: 20% !important;
     border-radius: 10px !important;
   }
 
@@ -424,24 +452,37 @@ select:focus {
 
 p.success {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  color: white; /* Color del texto */
-  padding: 10px; /* Espacio interno */
-  text-align: center; /* Texto centrado */
-  font-size: 18px; /* Tamaño de fuente */
+  color: white;
+  /* Color del texto */
+  padding: 10px;
+  /* Espacio interno */
+  text-align: center;
+  /* Texto centrado */
+  font-size: 18px;
+  /* Tamaño de fuente */
   font-weight: bold;
-  border-radius: 20px; /* Bordes redondeados */
-  margin: 10px 0; /* Márgenes superior e inferior */
+  border-radius: 20px;
+  /* Bordes redondeados */
+  margin: 10px 0;
+  /* Márgenes superior e inferior */
 }
 
 
 p.danger {
-  background-color: red; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 10px; /* Espacio interno */
-  text-align: center; /* Texto centrado */
-  font-size: 18px; /* Tamaño de fuente */
-  border-radius: 20px; /* Bordes redondeados */
-  margin: 10px 0; /* Márgenes superior e inferior */
+  background-color: red;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 10px;
+  /* Espacio interno */
+  text-align: center;
+  /* Texto centrado */
+  font-size: 18px;
+  /* Tamaño de fuente */
+  border-radius: 20px;
+  /* Bordes redondeados */
+  margin: 10px 0;
+  /* Márgenes superior e inferior */
 }
 
 
@@ -977,7 +1018,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.7) -5.91%, rgba(74, 47, 189, 0.7) 111.58%),
     url('/src/assets/img/logo-rounded.png');
-    
+
   background-size: 100% 100%, auto 70px;
   background-position: center center, center center;
   /* Ajusta el tamaño del linear gradient y del logo según lo que desees */
@@ -990,10 +1031,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .video-container .logo {
-  width: 30%; /* Ajusta el tamaño del logo según lo que desees */
+  width: 30%;
+  /* Ajusta el tamaño del logo según lo que desees */
   position: absolute;
-  top: 20px; /* Ajusta la distancia desde la parte superior */
-  right: 20px; /* Ajusta la distancia desde la derecha */
+  top: 20px;
+  /* Ajusta la distancia desde la parte superior */
+  right: 20px;
+  /* Ajusta la distancia desde la derecha */
 }
 
 
@@ -1074,7 +1118,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form input::placeholder,
 .contact form textarea::placeholder {
- 
+
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -1082,7 +1126,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
-  
+
   color: #121212;
   opacity: 0.8;
 }
@@ -1111,7 +1155,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover {
   color: #fff;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  
+
 }
 
 .contact form button::before {
@@ -1124,7 +1168,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Cambiamos el valor de left para que esté fuera del botón inicialmente */
   z-index: -1;
   transition: 0.3s ease-in-out;
-  
+
 }
 
 .contact form button:hover::before {
@@ -1197,10 +1241,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 100%;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  flex-direction: column; /* Muestra el contenido como una columna */
-  padding: 15px; /* Ajusta el espaciado interno según sea necesario */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  flex-direction: column;
+  /* Muestra el contenido como una columna */
+  padding: 15px;
+  /* Ajusta el espaciado interno según sea necesario */
 }
 
 
@@ -1216,23 +1264,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   margin-top: 10px;
   margin-left: 150px;
-  
-  
+
+
 }
 
 
 
 .subscribed-message {
-  margin-top: 1em; /* Ajusta la altura según sea necesario */
-  
+  margin-top: 1em;
+  /* Ajusta la altura según sea necesario */
+
 }
 
 .subscribed-message {
-  white-space: nowrap !important; /* Evita saltos de línea en el texto */
-  font-size: 18px; /* Ajusta el tamaño de fuente según sea necesario */
-  letter-spacing: 0.8px; /* Ajusta el espaciado entre letras según sea necesario */
-  margin: 0; /* Elimina el margen superior e inferior predeterminado */
-  
+  white-space: nowrap !important;
+  /* Evita saltos de línea en el texto */
+  font-size: 18px;
+  /* Ajusta el tamaño de fuente según sea necesario */
+  letter-spacing: 0.8px;
+  /* Ajusta el espaciado entre letras según sea necesario */
+  margin: 0;
+  /* Elimina el margen superior e inferior predeterminado */
+
 }
 
 
@@ -1252,11 +1305,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .news-sus-text {
-  
+
   display: flex;
   justify-content: center !important;
   align-items: center !important;
-  
+
 }
 
 
@@ -1264,11 +1317,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .newsletter-bx h3 {
   white-space: nowrap !important;
-  font-weight: 700;
+  /* Evita saltos de línea en el texto */
+  font-weight: 500;
+
   color: white;
 }
 
-.newsletter-bx .row h3{
+.newsletter-bx .row h3 {
   display: flex;
   justify-content: center !important;
   align-items: center !important;
@@ -1276,16 +1331,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .new-email-bx {
   background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
+  padding: 10px;
+  /* Aumenta el espacio interno vertical */
   border-radius: 20px;
   position: relative;
   z-index: 0;
   display: flex;
+  justify-content: start;
   font-weight: 500;
   font-size: 18px;
   align-items: center;
   transition: background 0.3s ease-in-out;
+  width: 500px;
+  /* Aumenta el ancho del elemento */
+
 }
+
 
 .new-email-bx input:focus {
   background-color: pink;
