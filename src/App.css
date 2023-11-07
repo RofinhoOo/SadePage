@@ -293,7 +293,13 @@ select:focus {
 
   }
 
+  
+
   .newsletter-bx h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     font-size: 20px !important;
     text-align: start !important;
     font-weight: 500 !important;
@@ -320,6 +326,7 @@ select:focus {
   }
 
   .newsletter-bx .row {
+    
     padding-left: none !important;
     padding-right: none !important;
   }
@@ -1168,7 +1175,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .newsletter-bx .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1202,17 +1209,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .custom-alert {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  flex-direction: column; /* Muestra el contenido como una columna */
-  padding: 15px; /* Ajusta el espaciado interno según sea necesario */
+
+  margin-top: 10px;
+  margin-left: 150px;
+  
   
 }
 
+
+
 .subscribed-message {
   margin-top: 1em; /* Ajusta la altura según sea necesario */
-  text-align: center; /* Centra el texto horizontalmente */
+  
 }
 
 .subscribed-message {
@@ -1238,21 +1246,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
+
+
 .news-sus-text {
-  margin-left: 150px;
+  
   display: flex;
-  justify-content: end;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
+  
 }
 
 
 
 
 .newsletter-bx h3 {
+  white-space: nowrap !important;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2em;
   color: white;
+}
+
+.newsletter-bx .row h3{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .new-email-bx {

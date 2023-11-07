@@ -45,7 +45,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
         <Col lg={12}>
             <div className="newsletter-bx">
                 <Row>
-                    <Col lg={6} md={6} xl={6}>
+                    <Col lg={6} md={6} xl={4}>
                         <div className='news-sus'>
                             {subscriptionStatus !== 'success' && (
                                 <div className='news-sus-titulo'>
@@ -54,19 +54,31 @@ export const Newsletter = ({ onValidated, status, message }) => {
                             )}
                             <div className='news-sus-text'>
                                 {subscriptionStatus === 'sending' && (
-                                    <Alert className="custom-alert sending-message">
+                                    <Alert
+                                        style={{
+                                            display: 'flex',
+                                            justifyContent: 'end',
+                                            width: '100%', // Asegura que ocupe todo el ancho disponible
+                                        }}
+                                        className="custom-alert sending-message"
+                                    >
                                         Sending...
                                     </Alert>
                                 )}
-                                {subscriptionStatus === 'error' && <Alert variant="danger" className="custom-alert">{message}</Alert>}
+                                {subscriptionStatus === 'error' && (
+                                    <Alert variant="danger" className="custom-alert">
+                                        {message}
+                                    </Alert>
+                                )}
                                 {subscriptionStatus === 'success' && (
                                     <Alert variant={getAlertVariant()} className="custom-alert subscribed-message">
-                                        {subscriptionStatus === 'sending' ? "Sending..." : "Successfully subscribed!"}
+                                        Successfully subscribed!
                                     </Alert>
                                 )}
                             </div>
                         </div>
                     </Col>
+
 
                     <Col className="news-btx" lg={6} md={6} xl={6}>
                         {subscriptionStatus !== 'success' && (

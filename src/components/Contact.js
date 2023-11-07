@@ -79,7 +79,7 @@ export const Contact = () => {
                   <ValidationError prefix="Message" field="message" />
                   <Col size={12} className="px-1">
                     {showSendingMessage ? (
-                      <p style={{ fontWeight: 'bold' }}>Sending...</p>
+                      <p style={{ fontWeight: 'bold', marginTop: '10px'}}>Sending...</p>
                     ) : state.succeeded ? (
                       <p className="success">Message sent!</p>
                     ) : (
