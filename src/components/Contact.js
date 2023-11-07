@@ -6,8 +6,9 @@ import TrackVisibility from 'react-on-screen';
 import { useForm, ValidationError } from '@formspree/react';
 
 export const Contact = () => {
-  const [state, handleSubmit] = useForm("xqkvjqye");
+  const [state, handleSubmit, reset] = useForm("xqkvjqye");
   const [showSendingMessage, setShowSendingMessage] = React.useState(false);
+  
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -16,10 +17,12 @@ export const Contact = () => {
 
     setTimeout(() => {
       setShowSendingMessage(false); // Oculta el mensaje de "Sending..." después de 3 segundos
+      
     }, 3000);
 
     if (success) {
       setShowSendingMessage(false); // Oculta el mensaje de "Sending..." si la operación fue exitosa
+      reset(); // Limpia el formulario
     }
   };
 
