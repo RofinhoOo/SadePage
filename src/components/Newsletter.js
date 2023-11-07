@@ -26,7 +26,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
         if (subscriptionStatus === 'success') {
             const timer = setTimeout(() => {
                 setSubscriptionStatus(null); // Restablece el estado después de 5 segundos
-            }, 3000);
+            }, 100000);
 
             return () => clearTimeout(timer);
         }
