@@ -1240,7 +1240,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .news-sus {
   display: flex;
-  justify-content: center !important;
   /* Cambiado de 'center' a 'space-between' */
   align-items: center;
 

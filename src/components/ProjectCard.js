@@ -7,7 +7,7 @@ export const ProjectCard = ({ title, description, videoUrl }) => {
             <div className="project-card-inner">
                 {videoUrl ? (
                     <div className="video-container">
-                        <video className="video" controls>
+                        <video className="video" controls autoplay>
                             <source src={videoUrl} type="video/mp4" />
                             Tu navegador no soporta la reproducción de video.
                         </video>
