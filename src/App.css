@@ -96,7 +96,7 @@ select:focus {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   body {
     max-width: 100%;
     /* Haz que el contenedor ocupe todo el ancho de la pantalla */
@@ -225,16 +225,19 @@ select:focus {
     margin-top: none !important;
   }
 
-  .project-cont .row{
+  .project-cont .row {
     gap: 40px !important;
   }
 
-  video{
-    border: 1px solid rgba(255, 255, 255, 0.5);;
+  video {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    ;
   }
 
+
+
   .video:hover {
-    border: 1px solid rgba(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255);
   }
 
   .project {
@@ -413,11 +416,25 @@ select:focus {
 
 
 p.success {
-  color: green;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  color: white; /* Color del texto */
+  padding: 10px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold;
+  border-radius: 20px; /* Bordes redondeados */
+  margin: 10px 0; /* Márgenes superior e inferior */
 }
 
+
 p.danger {
-  color: red;
+  background-color: red; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+  font-size: 18px; /* Tamaño de fuente */
+  border-radius: 20px; /* Bordes redondeados */
+  margin: 10px 0; /* Márgenes superior e inferior */
 }
 
 
@@ -913,30 +930,80 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-.project-card-inner{
+.project-card-inner {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  /* Centra horizontalmente */
   align-items: center;
+  /* Centra verticalmente */
   text-align: center;
   margin: 0 auto;
-  
-  
+  position: relative;
+}
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  position: relative;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container::before {
+  display: flex;
+  justify-content: flex-end;
+  /* Centra horizontalmente */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.7) -5.91%, rgba(74, 47, 189, 0.7) 111.58%),
+    url('/src/assets/img/logo-rounded.png');
+    
+  background-size: 100% 100%, auto 70px;
+  background-position: center center, center center;
+  /* Ajusta el tamaño del linear gradient y del logo según lo que desees */
+  background-repeat: no-repeat;
+  /* Evita la repetición de la imagen de fondo */
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: opacity 1s;
+}
+
+.video-container .logo {
+  width: 30%; /* Ajusta el tamaño del logo según lo que desees */
+  position: absolute;
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+}
+
+
+
+.video-container:hover::before {
+  opacity: 0;
+  /* Establece la opacidad en 0 cuando el mouse está encima */
 }
 
 .video {
-  width: 80%;
-  height: 40% !important;
+  width: 70%;
+  /* Ajusta el ancho al 100% para que se ajuste al contenedor */
+  height: auto;
+  /* Permite que la altura se ajuste automáticamente según el ancho */
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .video:hover {
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 3px solid purple;
 }
 
 /************ Projects Css ************/
@@ -997,6 +1064,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form input::placeholder,
 .contact form textarea::placeholder {
+ 
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -1004,6 +1072,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
+  
   color: #121212;
   opacity: 0.8;
 }
@@ -1032,6 +1101,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover {
   color: #fff;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  
 }
 
 .contact form button::before {
@@ -1044,6 +1114,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Cambiamos el valor de left para que esté fuera del botón inicialmente */
   z-index: -1;
   transition: 0.3s ease-in-out;
+  
 }
 
 .contact form button:hover::before {
@@ -1084,6 +1155,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .newsletter-bx {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 55px;
   color: #121212;
   padding: 65px 105px;
@@ -1092,21 +1166,76 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
-.newsletter-bx .row{
+.newsletter-bx .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  color: white !important;
+  border-radius: 20px !important;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%) !important;
+  padding: 5px;
+  margin-top: 40px;
+  border: 1px solid white !important;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Muestra el contenido como una columna */
+  padding: 15px; /* Ajusta el espaciado interno según sea necesario */
+}
+
+
+
+.status-message {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
+.custom-alert {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Muestra el contenido como una columna */
+  padding: 15px; /* Ajusta el espaciado interno según sea necesario */
+  
+}
 
+.subscribed-message {
+  margin-top: 1em; /* Ajusta la altura según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.subscribed-message {
+  white-space: nowrap !important; /* Evita saltos de línea en el texto */
+  font-size: 18px; /* Ajusta el tamaño de fuente según sea necesario */
+  letter-spacing: 0.8px; /* Ajusta el espaciado entre letras según sea necesario */
+  margin: 0; /* Elimina el margen superior e inferior predeterminado */
+  
+}
+
+
+.newsletter-bx .col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .news-sus {
   display: flex;
   justify-content: center !important;
   /* Cambiado de 'center' a 'space-between' */
   align-items: center;
- 
+
 }
 
 .news-sus-text {
@@ -1192,25 +1321,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Ajusta la altura según sea necesario */
 }
 
-.alert {
-  color: white;
-  border: 1px solid pink;
-  border-radius: 20px;
-  padding: 5px;
-  margin-top: 40px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 100%;
-}
-
-.status-message {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
 
 
 

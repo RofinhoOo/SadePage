@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Alert } from 'react-bootstrap';
 
 export const Newsletter = ({ onValidated, status, message }) => {
     const [email, setEmail] = useState('');
-    const [subscribed, setSubscribed] = useState(false);
+    const [subscriptionStatus, setSubscriptionStatus] = useState(null);
 
     const handleSubscribe = (e) => {
         e.preventDefault();
@@ -11,33 +11,65 @@ export const Newsletter = ({ onValidated, status, message }) => {
             onValidated({
                 EMAIL: email,
             });
-            setSubscribed(true);
+            setSubscriptionStatus('sending');
+
+            // Simula un retraso para la demostración
+            setTimeout(() => {
+                setSubscriptionStatus('success');
+            }, 3000);
+        } else {
+            setSubscriptionStatus('error');
         }
+    };
+
+    useEffect(() => {
+        if (subscriptionStatus === 'success') {
+            const timer = setTimeout(() => {
+                setSubscriptionStatus(null); // Restablece el estado después de 5 segundos
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [subscriptionStatus]);
+
+    const getAlertVariant = () => {
+        if (subscriptionStatus === 'sending') {
+            return 'success';
+        } else if (subscriptionStatus === 'error') {
+            return 'danger';
+        }
+        return 'success';
     };
 
     return (
         <Col lg={12}>
             <div className="newsletter-bx">
                 <Row>
-                    <Col lg={12} md={6} xl={5}>
+                    <Col lg={6} md={6} xl={6}>
                         <div className='news-sus'>
-                            <div className='news-sus-titulo'>
-                                <h3>Subscribe to the newsletter</h3>
-                            </div>
+                            {subscriptionStatus !== 'success' && (
+                                <div className='news-sus-titulo'>
+                                    <h3>Subscribe to the newsletter</h3>
+                                </div>
+                            )}
                             <div className='news-sus-text'>
-                                {status === 'sending' && <Alert className="custom-alert">Sending...</Alert>}
-                                {status === 'error' && <Alert variant="danger" className="custom-alert">{message}</Alert>}
-                                {subscribed && (
-                                    <Alert variant="success" className="custom-alert subscribed-message">
-                                        Successfully subscribed!
+                                {subscriptionStatus === 'sending' && (
+                                    <Alert className="custom-alert sending-message">
+                                        Sending...
+                                    </Alert>
+                                )}
+                                {subscriptionStatus === 'error' && <Alert variant="danger" className="custom-alert">{message}</Alert>}
+                                {subscriptionStatus === 'success' && (
+                                    <Alert variant={getAlertVariant()} className="custom-alert subscribed-message">
+                                        {subscriptionStatus === 'sending' ? "Sending..." : "Successfully subscribed!"}
                                     </Alert>
                                 )}
                             </div>
                         </div>
                     </Col>
 
-                    <Col className="news-btx" md={6} xl={7}>
-                        {!subscribed && (
+                    <Col className="news-btx" lg={6} md={6} xl={6}>
+                        {subscriptionStatus !== 'success' && (
                             <form
                                 onSubmit={handleSubscribe}
                                 action={`https://app.us13.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
@@ -47,15 +79,20 @@ export const Newsletter = ({ onValidated, status, message }) => {
                                 className="validate"
                                 target="_blank"
                             >
-                                <div className="new-email-bx">
-                                    <input
-                                        value={email}
-                                        type="email"
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Email Address"
-                                    />
-                                    <button type="submit">Subscribe</button>
-                                </div>
+                                {subscriptionStatus !== 'sending' && (
+                                    <div className="new-email-bx">
+                                        <input
+                                            value={email}
+                                            type="email"
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            placeholder="Email Address"
+                                            required
+                                        />
+                                        <button type="submit">
+                                            <span>{subscriptionStatus === 'sending' ? "Sending..." : "Subscribe"}</span>
+                                        </button>
+                                    </div>
+                                )}
                             </form>
                         )}
                     </Col>

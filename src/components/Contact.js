@@ -7,6 +7,21 @@ import { useForm, ValidationError } from '@formspree/react';
 
 export const Contact = () => {
   const [state, handleSubmit] = useForm("xqkvjqye");
+  const [showSendingMessage, setShowSendingMessage] = React.useState(false);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setShowSendingMessage(true); // Muestra el mensaje de "Sending..."
+    const success = await handleSubmit(e);
+
+    setTimeout(() => {
+      setShowSendingMessage(false); // Oculta el mensaje de "Sending..." después de 3 segundos
+    }, 3000);
+
+    if (success) {
+      setShowSendingMessage(false); // Oculta el mensaje de "Sending..." si la operación fue exitosa
+    }
+  };
 
   return (
     <section className="contact" id="connect">
@@ -14,19 +29,12 @@ export const Contact = () => {
         <Row className="item-form">
           <Col size={12} md={6}>
             <TrackVisibility>
-              {/* {({ isVisible }) => ( */}
-                <img
-                  id="contact-image"
-                  src={contactImg}
-                  alt="Contact Us"                 
-                  // className={isVisible ? "animate__animated animate__zoomIn" : ""}
-                />
-              {/* )} */}
+              <img id="contact-image" src={contactImg} alt="Contact Us" />
             </TrackVisibility>
           </Col>
           <Col size={12} md={6}>
             <h2>Get in Touch</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleFormSubmit}>
               <Row>
                 <Col size={12} sm={6} className="px-1">
                   <input
@@ -51,10 +59,7 @@ export const Contact = () => {
                     name="email"
                     placeholder="Email Address"
                   />
-                  <ValidationError
-                    prefix="Email"
-                    field="email"
-                  />
+                  <ValidationError prefix="Email" field="email" />
                 </Col>
                 <Col size={12} sm={6} className="px-1">
                   <input
@@ -71,19 +76,20 @@ export const Contact = () => {
                     name="message"
                     placeholder="Your Message"
                   />
-                  <ValidationError
-                    prefix="Message"
-                    field="message"
-                  />
-                  <button type="submit" disabled={state.submitting}>
-                    <span>{state.submitting ? "Sending..." : "Send"}</span>
-                  </button>
-                </Col>
-                {state.succeeded && (
-                  <Col>
-                    <p className="success">Message sent successfully</p>
+                  <ValidationError prefix="Message" field="message" />
+                  <Col size={12} className="px-1">
+                    {showSendingMessage ? (
+                      <p style={{ fontWeight: 'bold' }}>Sending...</p>
+                    ) : state.succeeded ? (
+                      <p className="success">Message sent!</p>
+                    ) : (
+                      <button type="submit" disabled={state.submitting}>
+                        <span>Send</span>
+                      </button>
+                    )}
                   </Col>
-                )}
+
+                </Col>
               </Row>
             </form>
           </Col>
