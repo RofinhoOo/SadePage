@@ -333,8 +333,12 @@ select:focus {
     /* Cambia el ancho al 100% */
     margin-bottom: 10px;
     justify-content: center;
+    align-items: center;
     background: pink;
   }
+
+ 
+
 
   .new-email-bx input:focus {
     background: pink !important;
@@ -1402,6 +1406,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Aumenta el ancho del elemento */
 
 }
+
+
 
 
 .new-email-bx input:focus {
