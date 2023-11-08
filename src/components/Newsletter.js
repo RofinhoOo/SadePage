@@ -16,7 +16,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
             // Simula un retraso para la demostración
             setTimeout(() => {
                 setSubscriptionStatus('success');
-            }, 7000);
+            }, 3000);
         } else {
             setSubscriptionStatus('error');
         }

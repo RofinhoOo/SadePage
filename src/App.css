@@ -362,17 +362,17 @@ select:focus {
     /* Muestra el contenido como una columna */
   }
 
-  .news-sus-titulo, .news-sus-text{ 
+  .custom-alert .subscribed-message{
+    width: 40% !important;
+  }
 
-    display: flex !important;
-    justify-content: center !important;
-    /* Centra horizontalmente */
-    align-items: center   !important;
-    /* Centra verticalmente */
-    flex-direction: column !important;
-    /* Muestra el contenido como una columna */
+  .news-sus-titulo{ 
+
+    
+    margin-top: 40px !important;
   
   }
+
   
   .newsletter-bx {
     display: flex !important;
