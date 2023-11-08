@@ -337,6 +337,15 @@ select:focus {
    
   }
 
+  .custom-alert{
+    margin-left: 0 !important;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-right: 40px !important;
+  }
+
   .sending-message{
     margin-top: 80px !important;
     flex-direction: column !important;
@@ -412,7 +421,7 @@ select:focus {
 
   .social-icon {
     display: inline-block;
-    margin-left: 14px;
+    margin-left: 1px;
   }
 
   .social-icon a {
@@ -541,7 +550,7 @@ span.navbar-text {
 
 .social-icon {
   display: inline-block;
-  margin-left: 14px;
+  margin-left: 1px;
 }
 
 .social-icon a {
