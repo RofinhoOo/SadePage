@@ -2,7 +2,7 @@ import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import travel1 from "../assets/img/travel1.mp4";
 import travel2 from "../assets/img/travel2.mp4";
 import travel3 from "../assets/img/travel3.mp4";
-import food11 from "../assets/img/food11.webm";
+import food1 from "../assets/img/food1.mp4";
 import food2 from "../assets/img/food2.mp4";
 import food3 from "../assets/img/food3.mp4";
 import other1 from "../assets/img/other1.mp4";
@@ -32,7 +32,7 @@ export const Projects = () => {
 
         {
          
-            videoUrl: food11,
+            videoUrl: food1,
         },
         {
             
