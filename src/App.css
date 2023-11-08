@@ -197,6 +197,16 @@ select:focus {
     padding-right: 20px !important;
   }
 
+  .react-multiple-carousel__arrow--left{
+  
+    margin-left: 5px !important;
+  }
+  
+  .react-multiple-carousel__arrow--right{
+    
+    margin-right: 5px !important;
+  }
+
   .skill-bx {
     margin: none !important;
     padding: 100%;
@@ -813,6 +823,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
+.react-multiple-carousel__arrow--left{
+  
+  margin-left: -20px;
+}
+
+.react-multiple-carousel__arrow--right{
+  
+  margin-right: -20px;
+}
+
 .skill-bx {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border-radius: 64px;
@@ -1058,10 +1078,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   /* Evita la repetición de la imagen de fondo */
   opacity: 1;
+  pointer-events: none;
   cursor: pointer;
   border-radius: 20px;
   transition: opacity 1s;
 }
+
+
 
 .video-container .logo {
   width: 30%;
