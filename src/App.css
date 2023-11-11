@@ -296,6 +296,10 @@ select:focus {
     margin-bottom: 30px !important;
   }
 
+  /* .contact form input, .contact form textarea{
+    text-align: center !important;
+  } */
+
   /* NEWSLETTER */
 
   .new-email-bx {
@@ -335,6 +339,7 @@ select:focus {
     justify-content: center;
     align-items: center;
     background: pink;
+    text-align: center;
   }
 
  
