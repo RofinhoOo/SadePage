@@ -18,10 +18,10 @@ export const Projects = () => {
 
     const travels = [
         {
-            videoUrl: travel1,
+            videoUrl: travel2,
         },
         {
-            videoUrl: travel2,
+            videoUrl: travel1,
         },
         {
             videoUrl: travel3,
