@@ -25,7 +25,7 @@ export const Footer = () => {
                            <a href="https://www.facebook.com/sadelee.rast?locale=es_ES"><img src={icon2} alt='' /></a>
                            <a href="https://www.instagram.com/sadelee.rast/"><img src={icon3} alt='' /></a>
                        </div>
-                       <p>CopyRight 2023. All Right Reserved</p>
+                       <p>CopyRight 2025. All Rights Reserved</p>
                    </Col>
                </Row>
            </Container>
